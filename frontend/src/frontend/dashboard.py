@@ -8,6 +8,7 @@ BASE_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
 def main():
     st.markdown("# eClipseBord dashboard")
     st.markdown("Welcome to the eClipseBoard dashboard! Here you can explore data on lunar and solar eclipses🌑🌒🌕")
+    st.caption("Showing the first 10 eclipses from each dataset.")
 
     lunar_response = httpx.get(f"{BASE_URL}/lunar/data")
     solar_response = httpx.get(f"{BASE_URL}/solar/data")
@@ -40,7 +41,7 @@ def main():
             ]
 
         st.metric(
-            "Total Lunar Eclipses",
+            "Lunar eclipses shown",
             len(filtered_lunar)
         )
 
@@ -69,7 +70,7 @@ def main():
             ]
 
         st.metric(
-            "Total Solar Eclipses",
+            "Solar eclipses shown",
             len(filtered_solar)
         )
 
