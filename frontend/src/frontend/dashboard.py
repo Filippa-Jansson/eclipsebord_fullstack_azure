@@ -6,7 +6,7 @@ import os
 BASE_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
 
 def main():
-    st.markdown("# eClipseBord dashboard")
+    st.markdown("# eClipseBoard dashboard")
     st.markdown("Welcome to the eClipseBoard dashboard! Here you can explore data on lunar and solar eclipses🌑🌒🌕")
     st.caption("Showing the first 10 eclipses from each dataset.")
 
